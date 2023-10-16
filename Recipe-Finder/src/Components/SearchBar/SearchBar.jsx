@@ -1,5 +1,6 @@
 import "./SearchBar.css";
 import { useState, useRef } from "react";
+import RecipePage from "../RecipePage/RecipePage";
 import SearchOutput from "../SearchOutput/SearchOutput";
 
 const SearchBar = () => {
@@ -47,6 +48,9 @@ const SearchBar = () => {
           disAppearSeacrhOutput={setEnteredRecipe}
           changeRecipeFlag={setRecipePageFlag}
         />
+      )}
+        {!enteredRecipe && recipePageFlag != 0 && (
+        <RecipePage id={recipePageFlag} />
       )}
     </>
   );
