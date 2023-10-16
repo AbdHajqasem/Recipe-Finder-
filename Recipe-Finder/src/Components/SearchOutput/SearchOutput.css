@@ -1,0 +1,50 @@
+.elementscontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.recipe-container {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recipe-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.ingredients-favotite-btn {
+  width: 120px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background-color: red;
+  margin-top: 10px;
+}
+
+.ingredients-favotite-btn:hover {
+  background-color: rgb(110, 6, 6);
+  transition: 0.7s ease;
+}
+
+.ingredients-favotite-btn:active {
+  transform: scale(0.9);
+  transition: 0.7s ease;
+}
+
+.imgcontainer {
+  width: 260px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.imgcontainer img {
+  height: 100%;
+}
