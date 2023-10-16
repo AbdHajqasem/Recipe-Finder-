@@ -1,5 +1,6 @@
 import "./SearchBar.css";
 import { useState, useRef } from "react";
+import SearchOutput from "../SearchOutput/SearchOutput";
 
 const SearchBar = () => {
   const [enteredRecipe, setEnteredRecipe] = useState("");
@@ -40,6 +41,13 @@ const SearchBar = () => {
           </button>
         </div>
       </form>
+      {enteredRecipe && (
+        <SearchOutput
+          recipeName={enteredRecipe}
+          disAppearSeacrhOutput={setEnteredRecipe}
+          changeRecipeFlag={setRecipePageFlag}
+        />
+      )}
     </>
   );
 };
