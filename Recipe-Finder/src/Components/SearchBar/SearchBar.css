@@ -1,0 +1,70 @@
+.barcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Searchbar {
+  max-width: 600px;
+  min-width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.searchbtn {
+  width: 120px;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background-color: red;
+  margin-top: 10px;
+}
+
+.searchbtn :hover {
+  background-color: rgb(110, 6, 6);
+  transition: 0.7s ease;
+}
+
+.searchbtn:active {
+  transform: scale(0.9);
+  transition: 0.7s ease;
+}
+
+.favoritebtncontainer {
+  position: fixed;
+  top: 17px;
+  right: 30px;
+}
+
+.favoritebtn {
+  border: none;
+  background-color: white;
+}
+
+#heart {
+  color: red;
+  font-size: 20px;
+}
+
+#heart:hover {
+  color: rgb(110, 6, 6);
+  transition: 0.7s ease;
+}
+
+@media screen and (max-width: 400px) {
+  .favoritebtncontainer {
+    top: 70px;
+    right: 70px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .favoritebtncontainer {
+    top: 70px;
+    right: 30px;
+  }
+}
