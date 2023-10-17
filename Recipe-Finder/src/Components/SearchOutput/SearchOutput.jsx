@@ -64,7 +64,9 @@ const SearchOutput = (prop) => {
               type="button"
               className="ingredients-favotite-btn"
               value={"Add to favorite"}
-              onClick={()=>{addToFavorite(item)}}
+              onClick={() => {
+                addToFavorite(item);
+              }}
             />
           </div>
         ))}

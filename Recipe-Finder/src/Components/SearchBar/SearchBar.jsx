@@ -2,6 +2,7 @@ import "./SearchBar.css";
 import { useState, useRef } from "react";
 import RecipePage from "../RecipePage/RecipePage";
 import SearchOutput from "../SearchOutput/SearchOutput";
+import Favorite from "../Favorite/Favorite";
 
 const SearchBar = () => {
   const [enteredRecipe, setEnteredRecipe] = useState("");
@@ -49,8 +50,15 @@ const SearchBar = () => {
           changeRecipeFlag={setRecipePageFlag}
         />
       )}
-        {!enteredRecipe && recipePageFlag != 0 && (
+      {!enteredRecipe && recipePageFlag != 0 && (
         <RecipePage id={recipePageFlag} />
+      )}
+      {!enteredRecipe && recipePageFlag == 0 && favoriteFlag && (
+        <Favorite
+          id={recipePageFlag}
+          changeFavoriteFlag={setFavoriteFlag}
+          changeRecipeFlag={setRecipePageFlag}
+        />
       )}
     </>
   );
